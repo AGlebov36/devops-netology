@@ -11,11 +11,11 @@
 * задание [03-sysadmin-05-fs](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_10%20Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
 * задание [03-sysadmin-06-net](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_11%20Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
 * задание [03-sysadmin-07-net](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_12%20Alex_%20Glebov_DEVOPS-22.pdf) -- На проверке
-* задание 03-sysadmin-08-net
-* задание 03-sysadmin-09-security
-* задание 04-script-01-bash
-* задание 04-script-02-py
-* задание 04-script-03-yaml
+* задание [03-sysadmin-08-net]() -- Ждем
+* задание [03-sysadmin-09-security]() -- Ждем
+* задание [04-script-01-bash]() -- Ждем
+* задание [04-script-02-py]() -- Ждем
+* задание [04-script-03-yaml]() -- Ждем
 
 
 
