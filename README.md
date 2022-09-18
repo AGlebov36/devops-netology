@@ -3,14 +3,14 @@
 * задание 02-git-01-vcs -- Выполнено
 * задание 02-git-02-base -- Выполнено
 * задание 02-git-03-branching -- Выполнено
-* задание 02-git-04-tools -- Выполнено
-* задание 03-sysadmin-01-terminal -- Выполнено
-* задание 03-sysadmin-02-terminal -- Выполнено
-* задание 03-sysadmin-03-os -- Выполнено
-* задание 03-sysadmin-04-os -- Выполнено
-* задание 03-sysadmin-05-fs -- Выполнено
-* задание 03-sysadmin-06-net -- Выполнено
-* задание 03-sysadmin-07-net
+* задание [02-git-04-tools](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_5%20Alex_%20Glebov_DEVOPS-22%20.pdf) -- Выполнено
+* задание [03-sysadmin-01-terminal](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_6%20Alex_%20Glebov_DEVOPS-22%20.pdf) -- Выполнено
+* задание [03-sysadmin-02-terminal](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_7%20Alex_%20Glebov_DEVOPS-22%20.pdf) -- Выполнено
+* задание [03-sysadmin-03-os](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_8%20Alex_%20Glebov_DEVOPS-22%20.pdf) -- Выполнено
+* задание [03-sysadmin-04-os](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_9%20Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
+* задание [03-sysadmin-05-fs](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_10%20Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
+* задание [03-sysadmin-06-net](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_11%20Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
+* задание [03-sysadmin-07-net](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_12%20Alex_%20Glebov_DEVOPS-22.pdf) -- На проверке
 * задание 03-sysadmin-08-net
 * задание 03-sysadmin-09-security
 * задание 04-script-01-bash
