@@ -13,12 +13,13 @@
 * задание [03-sysadmin-06-net](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_11%20Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
 * задание [03-sysadmin-07-net](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_12%20Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
 * задание [03-sysadmin-08-net](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_13%20Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
-* задание [03-sysadmin-09-security]() -- Ждем
-* задание [04-script-01-bash]() -- Ждем
-* задание [04-script-02-py]() -- Ждем
-* задание [04-script-03-yaml]() -- Ждем
+* задание [03-sysadmin-09-security]() -- Пройдено
+* задание [04-script-01-bash]() -- Пройдено
+* задание [04-script-02-py]() -- Пройдено
+* задание [04-script-03-yaml]() -- Пройдено
 
 * Виртуализация, базы данных и Terraform
+* задание [05-virt-01-basics]()
 * CI, мониторинг и управление конфигурациями
 * Администрирование и конфигурация Kubernetes
 * Kubernetes и облачные сервисы
