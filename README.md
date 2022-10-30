@@ -19,7 +19,7 @@
 * задание [04-script-03-yaml]() -- Пройдено
 
 * Виртуализация, базы данных и Terraform
-* задание [05-virt-01-basics]()
+* задание [05-virt-01-basics](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_%20virt-01-basics_Alex_%20Glebov_DEVOPS-22.pdf)
 * CI, мониторинг и управление конфигурациями
 * Администрирование и конфигурация Kubernetes
 * Kubernetes и облачные сервисы
