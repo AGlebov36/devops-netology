@@ -21,7 +21,7 @@
 * Виртуализация, базы данных и Terraform
 * задание [05-virt-01-basics](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_%20virt-01-basics_Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
 * задание [05-virt-02-iaac](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_%20virt-02-iaac_Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
-* задание [05-virt-03-docker]() --на проверке
+* задание [05-virt-03-docker](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_virt-03-docker_Alex_%20Glebov_DEVOPS-22.pdf) --на проверке
 * задание [05-virt-04-docker-compose]() -- в процессе
 * задание [05-virt-05-docker-swarm]() -- в процессе
 * CI, мониторинг и управление конфигурациями
