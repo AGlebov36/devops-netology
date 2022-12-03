@@ -26,7 +26,8 @@
 * задание [05-virt-05-docker-swarm](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_05-virt-05-docker-swarm_Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
 * задание [06-db-01-basics](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_%2006-db-01-basics_Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
 * задание [06-db-02-sql](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_06-db-02-sql_Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
-* задание [06-db-03-mysql](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_06-db-03-mysql_Alex_%20Glebov_DEVOPS-22.pdf)-- на проверке
+* задание [06-db-03-mysql](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_06-db-03-mysql_Alex_%20Glebov_DEVOPS-22.pdf)-- Выполнено
+* задание [06-db-04-postgresql]()-- на проверке
 * CI, мониторинг и управление конфигурациями
 * Администрирование и конфигурация Kubernetes
 * Kubernetes и облачные сервисы
