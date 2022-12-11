@@ -30,7 +30,7 @@
 * задание [06-db-04-postgresql](https://github.com/AGlebov36/devops-netology/blob/main/06-db-04-postgresql.md)-- изучаем
 * задание [06-db-05-elasticsearch]() -- изучаем
 * задание [06-db-06-troobleshooting]() -- изучаем
-* задание [07-terraform-01-intro]() -- на проверке
+* задание [07-terraform-01-intro](https://github.com/AGlebov36/devops-netology/blob/main/07-terraform-01-intro.md) -- на проверке
 * задание [07-terraform-02-syntax]() -- изучаем
 * задание [07-terraform-03-basic]() -- изучаем
 * задание [07-terraform-04-teamwork]() -- изучаем
