@@ -35,7 +35,7 @@
 * задание [07-terraform-03-basic]() -- изучаем
 * задание [07-terraform-04-teamwork]() -- изучаем
 * задание [07-terraform-05-golang]() -- изучаем
-* задание [07-terraform-06-providers]() -- зучаем
+* задание [07-terraform-06-providers]() -- изучаем
 * CI, мониторинг и управление конфигурациями
 * Администрирование и конфигурация Kubernetes
 * Kubernetes и облачные сервисы
