@@ -406,10 +406,9 @@ test_database-#
 
 Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца title для таблиц test_database?
 
-Для уникальности можно добавить индекс или первичный ключ
+Сделаем уникальность столбца title следующим образом:
 
 ```bash
-test_database=# CREATE INDEX ON orders ((lower(title)))
-test_database-#
-
+test_database=# CREATE unique INDEX title_un ON public.orders(title);
+CREATE INDEX
 ```
