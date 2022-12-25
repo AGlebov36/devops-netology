@@ -29,7 +29,7 @@
 * задание [06-db-03-mysql](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_06-db-03-mysql_Alex_%20Glebov_DEVOPS-22.pdf)-- Выполнено
 * задание [06-db-04-postgresql](https://github.com/AGlebov36/devops-netology/blob/main/06-db-04-postgresql.md)-- изучаем
 * задание [06-db-05-elasticsearch]() -- изучаем
-* задание [06-db-06-troobleshooting]() -- На проверке
+* задание [06-db-06-troobleshooting](https://github.com/AGlebov36/devops-netology/blob/main/06-db-06-troobleshooting.md) -- На проверке
 * задание [07-terraform-01-intro](https://github.com/AGlebov36/devops-netology/blob/main/07-terraform-01-intro.md) -- Выполнено
 * задание [07-terraform-02-syntax]() -- изучаем
 * задание [07-terraform-03-basic]() -- изучаем

@@ -117,6 +117,7 @@ Postgres недостаточно памяти
 Уменьшить в postgresql.conf значения, влияющие на потребляемую сервером память: 
 
 shared_buffers, work_mem, max_connections, maintenance_work_mem,   effective_cache_size, temp_buffers;
+
 Физически добавить память на сервере.
 
 ---
