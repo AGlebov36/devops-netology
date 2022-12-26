@@ -1,5 +1,5 @@
-# devops-netology
-* DevOps и системное администрирование
+# Devops-Netology 2022-2023
+### DevOps и системное администрирование
 * задание 01-intro-01- -- Выполнено
 * задание 02-git-01-vcs -- Выполнено
 * задание 02-git-02-base -- Выполнено
@@ -18,7 +18,7 @@
 * задание [04-script-02-py]() -- Пройдено
 * задание [04-script-03-yaml]() -- Пройдено
 ---
-* Виртуализация, базы данных и Terraform
+### Виртуализация, базы данных и Terraform
 * задание [05-virt-01-basics](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_%20virt-01-basics_Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
 * задание [05-virt-02-iaac](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_%20virt-02-iaac_Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
 * задание [05-virt-03-docker](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_virt-03-docker_Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
@@ -37,10 +37,14 @@
 * задание [07-terraform-05-golang]() -- изучаем
 * задание [07-terraform-06-providers]() -- изучаем
 ---
-* * CI, мониторинг и управление конфигурациями
+* CI, мониторинг и управление конфигурациями
+---
 * Администрирование и конфигурация Kubernetes
+---
 * Kubernetes и облачные сервисы
+--- 
 * Дипломный блок профессии DevOps-инженер
+---
 
 
 
