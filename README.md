@@ -17,7 +17,7 @@
 * задание [04-script-01-bash]() -- Пройдено
 * задание [04-script-02-py]() -- Пройдено
 * задание [04-script-03-yaml]() -- Пройдено
-
+---
 * Виртуализация, базы данных и Terraform
 * задание [05-virt-01-basics](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_%20virt-01-basics_Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
 * задание [05-virt-02-iaac](https://github.com/AGlebov36/devops-netology/blob/main/doc/DZ_%20virt-02-iaac_Alex_%20Glebov_DEVOPS-22.pdf) -- Выполнено
@@ -36,7 +36,8 @@
 * задание [07-terraform-04-teamwork]() -- изучаем
 * задание [07-terraform-05-golang]() -- изучаем
 * задание [07-terraform-06-providers]() -- изучаем
-* CI, мониторинг и управление конфигурациями
+---
+* * CI, мониторинг и управление конфигурациями
 * Администрирование и конфигурация Kubernetes
 * Kubernetes и облачные сервисы
 * Дипломный блок профессии DevOps-инженер
