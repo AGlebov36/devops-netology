@@ -34,7 +34,7 @@
 * задание [07-terraform-02-syntax]() -- изучаем
 * задание [07-terraform-03-basic]() -- изучаем
 * задание [07-terraform-04-teamwork]() -- изучаем
-* задание [07-terraform-05-golang]() -- на проверке
+* задание [07-terraform-05-golang](https://github.com/AGlebov36/devops-netology/blob/main/07-terraform-05-golang.md) -- на проверке
 * задание [07-terraform-06-providers]() -- изучаем
 ---
 * CI, мониторинг и управление конфигурациями
