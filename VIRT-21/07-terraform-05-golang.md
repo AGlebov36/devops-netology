@@ -35,7 +35,25 @@
     }
     ```
 ### Ответ
-```bash
+```bash 
+package main
+
+import "fmt"
+
+func MvF(m float64)(f float64) {
+    f = m * 3.281
+    return
+}
+
+func main() {
+    fmt.Print("Длина в метрах: ")
+    var input float64
+    fmt.Scanf("%f", &input)
+
+    output := MvF(input)
+
+    fmt.Printf("В футах: %v\n", output)
+}
 
 ```
 ---
@@ -44,13 +62,46 @@
     x := []int{48,96,86,68,57,82,63,70,37,34,83,27,19,97,9,17,}
     ```
 ### Ответ
-```bash
+```bash 
+package main
+
+import "fmt"
+import "sort"
+
+func GetMin (toSort []int)(minNum int) {
+	sort.Ints(toSort)
+	minNum = toSort[0]
+	return
+}
+
+func main() {
+	x := []int{48,96,86,68,57,82,63,70,37,34,83,27,19,97,9,17,}
+	y := GetMin(x)
+	fmt.Printf("наименьшее число в списке: %v\n", y)
+}
 
 ```
 ---
 * Напишите программу, которая выводит числа от 1 до 100, которые делятся на 3, то есть `(3, 6, 9, …)`.
 ### Ответ
-```bash
+```bash 
+package main
+
+import "fmt"
+
+func FilterList ()(devidedWithNoReminder []int) {
+	for i := 1;  i <= 100; i ++ {
+		if	i % 3 == 0 { 
+			devidedWithNoReminder = append(devidedWithNoReminder, i)
+		}
+	}	
+	return
+}
+
+func main() {
+	toPrint := FilterList()
+	fmt.Printf("Числа от 1 до 100, которые делятся на 3 : %v\n", toPrint)
+}
 
 ```
 ---
