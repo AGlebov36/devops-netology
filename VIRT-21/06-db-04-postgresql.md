@@ -406,9 +406,14 @@ test_database-#
 
 Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца title для таблиц test_database?
 
-Сделаем уникальность столбца title следующим образом:
+Сделаем уникальность столбца title следующим образом, добавил столбцу CONSTRAINT order_unique UNIQUE (title)
 
 ```bash
-test_database=# CREATE unique INDEX title_un ON public.orders(title);
-CREATE INDEX
+CREATE TABLE public.orders (
+    id integer NOT NULL, 
+    title character varying(80) NOT NULL,
+    price integer DEFAULT 0,
+    CONSTRAINT must_be_different UNIQUE(title)
+);
+
 ```
