@@ -145,7 +145,7 @@ $ANSIBLE_VAULT;1.1;AES256
 ```
 8. Запустите playbook на окружении `prod.yml`. При запуске `ansible` должен запросить у вас пароль. Убедитесь в работоспособности.
 ```bash
-alexg@alexg-PC:~/playbook$nsible-playbook -i inventory/prod.yml site.yml
+alexg@alexg-PC:~/playbook$ ansible-playbook -i inventory/prod.yml site.yml
 
 PLAY [Print os facts] ********************************************************************************************************************************************************************************************************
 ERROR! Attempting to decrypt but no vault secrets found
