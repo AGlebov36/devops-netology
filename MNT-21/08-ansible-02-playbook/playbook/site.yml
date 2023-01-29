@@ -32,3 +32,27 @@
       register: create_db
       failed_when: create_db.rc != 0 and create_db.rc !=82
       changed_when: create_db.rc == 0
+- name: Install Vector
+  hosts: vector
+  handlers:
+  - name: Start Vector service
+    become: true
+    ansible.builtin.service:
+      name: vector
+      state: restarted
+  tasks:
+    - name: Get Vector distrib
+      ansible.builtin.get_url:
+        url: "https://packages.timber.io/vector/0.21.1/vector-0.21.1-1.{{ ansible_architecture }}.rpm"
+        dest: "./vector-0.21.1-1.{{ ansible_architecture }}.rpm"
+    - name: Install Vector packages
+      become: true
+      ansible.builtin.yum:
+        name: vector-0.21.1-1.{{ ansible_architecture }}.rpm
+      notify: Start Vector service
+    - name: Deploy config Vector
+      template:
+        src: vector.j2
+        dest: /etc/vector/vector.toml
+        mode: 0755
+      notify: Start Vector service
