@@ -232,5 +232,5 @@ clickhouse-01              : ok=3    changed=0    unreachable=0    failed=1    s
 * описание playbook [README.md](./playbook/README.md)
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-02-playbook` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 * измененый [playbook](./playbook/)
-* ВЫПОЛНЯЕТСЯ С ОШИБКАМИ ПОМОГИТЕ РАЗОБРАТСЯ
+
 ---
