@@ -52,3 +52,9 @@
       ansible.builtin.yum:
         name: vector-0.21.1-1.{{ ansible_architecture }}.rpm
       notify: Start Vector service
+    - name: Deploy config Vector
+      template:
+        src: vector.j2
+        dest: /etc/vector/vector.toml
+        mode: 0755
+        notify: Start Vector service
