@@ -98,8 +98,6 @@
         dest: /etc/nginx/nginx.conf
         mode: 0644
       notify: Start nginx service
-      roles:
-    - role: lighthouse-role
       post_tasks:
     - name: Stop FW
       become: true
