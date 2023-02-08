@@ -154,18 +154,237 @@ lighthouse:
 ```
 5. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть.
 ```bash
+alexg@alexg-PC:~/PycharmProjects/devops-netology/MNT-21/08-ansible-03-yandex/playbook$ ansible-lint site.yml
+WARNING  Overriding detected file kind 'yaml' with 'playbook' for given positional argument: site.yml
 
 ```
 6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
 ```bash
+alexg@alexg-PC:~/PycharmProjects/devops-netology/MNT-21/08-ansible-03-yandex/playbook$ ansible-playbook -i inventory/prod.yml site.yml --check
 
+PLAY [Install clickhouse] ********************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+ok: [clickhouse-01]
+
+PLAY [Install vector] ************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+ok: [vector-01]
+
+PLAY [Install lighthouse] ********************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+ok: [lighthouse-01]
+
+TASK [Install epel-release | Install Nginx] **************************************************************************************************************************************************************
+changed: [lighthouse-01]
+
+TASK [Install Nginx | Install Nginx] *********************************************************************************************************************************************************************
+ok: [lighthouse-01]
+
+PLAY RECAP ***********************************************************************************************************************************************************************************************
+clickhouse-01              : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+lighthouse-01              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+vector-01                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
 ```
 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
 ```bash
+alexg@alexg-PC:~/PycharmProjects/devops-netology/MNT-21/08-ansible-03-yandex/playbook$ ansible-playbook -i inventory/prod.yml site.yml --diff
 
+PLAY [Install clickhouse] ********************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+ok: [clickhouse-01]
+
+PLAY [Install vector] ************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+ok: [vector-01]
+
+PLAY [Install lighthouse] ********************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+ok: [lighthouse-01]
+
+TASK [Install epel-release | Install Nginx] **************************************************************************************************************************************************************
+changed: [lighthouse-01]
+
+TASK [Install Nginx | Install Nginx] *********************************************************************************************************************************************************************
+changed: [lighthouse-01]
+
+TASK [Create Nginx config | Install Nginx] ***************************************************************************************************************************************************************
+--- before: /etc/nginx/nginx.conf
++++ after: /home/alexg/.ansible/tmp/ansible-local-231414zzjfle4/tmp4bib1wk7/nginx.j2
+@@ -1,84 +1,46 @@
+-# For more information on configuration, see:
+-#   * Official English Documentation: http://nginx.org/en/docs/
+-#   * Official Russian Documentation: http://nginx.org/ru/docs/
++user  root;
++worker_processes  auto;
++worker_priority     -1;
+ 
+-user nginx;
+-worker_processes auto;
+-error_log /var/log/nginx/error.log;
+-pid /run/nginx.pid;
+-
+-# Load dynamic modules. See /usr/share/doc/nginx/README.dynamic.
+-include /usr/share/nginx/modules/*.conf;
++error_log  /var/log/nginx/error.log info;
++pid        /var/run/nginx.pid;
+ 
+ events {
+-    worker_connections 1024;
++    worker_connections  2048;
+ }
+ 
+ http {
+-    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
++    include       /etc/nginx/mime.types;
++    default_type  application/octet-stream;
++
++    log_format  compression  '$remote_addr - $remote_user [$time_local] "$request" '
+                       '$status $body_bytes_sent "$http_referer" '
+                       '"$http_user_agent" "$http_x_forwarded_for"';
++    access_log  /var/log/nginx/access.log  combined;
+ 
+-    access_log  /var/log/nginx/access.log  main;
++    sendfile on;
++    tcp_nopush on;
++    tcp_nodelay on;
++    keepalive_timeout  65;
++    reset_timedout_connection  on;
++    client_body_timeout        35;
++    send_timeout               30;
+ 
+-    sendfile            on;
+-    tcp_nopush          on;
+-    tcp_nodelay         on;
+-    keepalive_timeout   65;
+-    types_hash_max_size 4096;
++    gzip on;
++    gzip_min_length     1000;
++    gzip_vary on;
++    gzip_proxied        expired no-cache no-store private auth;
++    gzip_types          text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript;
++    gzip_disable        "msie6";
+ 
+-    include             /etc/nginx/mime.types;
+-    default_type        application/octet-stream;
++    types_hash_max_size 2048;
++    client_max_body_size 512M;
++    proxy_buffer_size   64k;
++    proxy_buffers   4 64k;
++    proxy_busy_buffers_size   64k;
++    server_names_hash_bucket_size 64;
+ 
+-    # Load modular configuration files from the /etc/nginx/conf.d directory.
+-    # See http://nginx.org/en/docs/ngx_core_module.html#include
+-    # for more information.
++    include /etc/nginx/modules-enabled/*.conf;
+     include /etc/nginx/conf.d/*.conf;
+-
+-    server {
+-        listen       80;
+-        listen       [::]:80;
+-        server_name  _;
+-        root         /usr/share/nginx/html;
+-
+-        # Load configuration files for the default server block.
+-        include /etc/nginx/default.d/*.conf;
+-
+-        error_page 404 /404.html;
+-        location = /404.html {
+-        }
+-
+-        error_page 500 502 503 504 /50x.html;
+-        location = /50x.html {
+-        }
+-    }
+-
+-# Settings for a TLS enabled server.
+-#
+-#    server {
+-#        listen       443 ssl http2;
+-#        listen       [::]:443 ssl http2;
+-#        server_name  _;
+-#        root         /usr/share/nginx/html;
+-#
+-#        ssl_certificate "/etc/pki/nginx/server.crt";
+-#        ssl_certificate_key "/etc/pki/nginx/private/server.key";
+-#        ssl_session_cache shared:SSL:1m;
+-#        ssl_session_timeout  10m;
+-#        ssl_ciphers HIGH:!aNULL:!MD5;
+-#        ssl_prefer_server_ciphers on;
+-#
+-#        # Load configuration files for the default server block.
+-#        include /etc/nginx/default.d/*.conf;
+-#
+-#        error_page 404 /404.html;
+-#            location = /40x.html {
+-#        }
+-#
+-#        error_page 500 502 503 504 /50x.html;
+-#            location = /50x.html {
+-#        }
+-#    }
+-
+-}
+-
++    include /etc/nginx/sites-enabled/*;
++}
+\ No newline at end of file
+
+changed: [lighthouse-01]
+
+RUNNING HANDLER [Start nginx service] ********************************************************************************************************************************************************************
+changed: [lighthouse-01]
+
+TASK [Stop FW] *******************************************************************************************************************************************************************************************
+ok: [lighthouse-01]:
+
+PLAY RECAP ***********************************************************************************************************************************************************************************************
+clickhouse-01              : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+lighthouse-01              : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+vector-01                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0  
 ```
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
 ```bash
+alexg@alexg-PC:~/PycharmProjects/devops-netology/MNT-21/08-ansible-03-yandex/playbook$ ansible-playbook -i inventory/prod.yml site.yml --diff
+
+PLAY [Install clickhouse] ********************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+ok: [clickhouse-01]
+
+PLAY [Install vector] ************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+ok: [vector-01]
+
+PLAY [Install lighthouse] ********************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+ok: [lighthouse-01]
+
+TASK [Install epel-release | Install Nginx] **************************************************************************************************************************************************************
+ok: [lighthouse-01]
+
+TASK [Install Nginx | Install Nginx] *********************************************************************************************************************************************************************
+ok: [lighthouse-01]
+
+TASK [Create Nginx config | Install Nginx] ***************************************************************************************************************************************************************
+ok: [lighthouse-01]
+
+TASK [Stop FW] *******************************************************************************************************************************************************************************************
+ok: [lighthouse-01]
+
+PLAY RECAP ***********************************************************************************************************************************************************************************************
+clickhouse-01              : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+lighthouse-01              : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+vector-01                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
 
 ```
 9. Подготовьте README.md файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
