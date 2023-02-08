@@ -98,7 +98,6 @@
       ansible.builtin.service:
         name: nginx
         state: restarted
-    pre_tasks:
     - name: Install epel-release | Install Nginx
       become: true
       yum:
@@ -117,7 +116,6 @@
         dest: /etc/nginx/nginx.conf
         mode: 0644
       notify: Start nginx service
-      post_tasks:
     - name: Stop FW
       become: true
       ansible.builtin.service:
