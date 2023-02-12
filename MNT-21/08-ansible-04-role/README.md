@@ -2,7 +2,9 @@
 
 ## Подготовка к выполнению
 1. Создайте два пустых публичных репозитория в любом своём проекте: vector-role и lighthouse-role.
+![](/img/for_08-ansible-04_repo.png)
 2. Добавьте публичную часть своего ключа к своему профилю в github.
+![](/img/for_08-ansible-04_ssh_key.png)
 
 ## Основная часть
 
@@ -19,6 +21,9 @@
    ```
 
 2. При помощи `ansible-galaxy` скачать себе эту роль.
+```bash
+
+```
 3. Создать новый каталог с ролью при помощи `ansible-galaxy role init vector-role`.
 4. На основе tasks из старого playbook заполните новую role. Разнесите переменные между `vars` и `default`. 
 5. Перенести нужные шаблоны конфигов в `templates`.
@@ -28,11 +33,9 @@
 9. Переработайте playbook на использование roles. Не забудьте про зависимости lighthouse и возможности совмещения `roles` с `tasks`.
 10. Выложите playbook в репозиторий.
 11. В ответ приведите ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.
+* репозитории [vector-role](https://github.com/AGlebov36/vector-role.git) и [lighthouse-role](https://github.com/AGlebov36/lighthouse-role.git)
 
+* измененый [playbook](./playbook/)
 ---
 
-### Как оформить ДЗ?
 
-Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
-
----
