@@ -22,6 +22,14 @@
 
 2. При помощи `ansible-galaxy` скачать себе эту роль.
 ```bash
+alexg@alex-PC:~/PycharmProjects/devops-netology/MNT-21/08-ansible-04-role/playbook$ ansible-galaxy install -r requirements.yml
+Starting galaxy role install process
+The authenticity of host 'github.com (140.82.121.4)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+- extracting clickhouse to /home/alexg/.ansible/roles/clickhouse
+- clickhouse (1.11.0) was installed successfully
 
 ```
 3. Создать новый каталог с ролью при помощи `ansible-galaxy role init vector-role`.
